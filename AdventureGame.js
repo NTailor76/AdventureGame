@@ -40,4 +40,8 @@ Getting a link to Github-Command used to get this working
       Press the Windows Key on your keyboard, type Credential Manager
       Click on Windows Credentials.Scroll down to the Generic Credentials section
       Look for anything named git:https://github.com or GitHub.Click on it, then click Remove
+9. FURTHER CHanges to the file ---- Only need to run 3 COMMANDS NOW....
+        COMMAND: git add .
+        COMMAND: git commit -m "Added comments to explain the character stats setup"
+        COMMAND: git push
 */
