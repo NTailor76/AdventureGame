@@ -1,18 +1,30 @@
+
+// Include readline for player input
 const readline = require("readline-sync");
 
 console.log("Welcome to the Adventure Games");
 
-let playerName = readline.question('Waht is your Name?') ;
+//let playerName = readline.question('Waht is your Name?') ;
 
 // Get player name using readline-sync
+let playerName = "";
 let playerHealth = 100;
-let playerGold = 20;
+let playerGold = 20; // State this is GOLD
 let CurrentLocation = "Village";
 let gameRunning = true;
 let inventory = [];
+
+console.log("=================================");
+console.log("       The Dragon's Quest        ");
+console.log("=================================");
+console.log("\nYour quest: Defeat the dragon in the mountains!");
+
+playerName = readline.question('What is your Name, Brave Aventurer?') ;
+
 // Create variables for player stats
-console.log('Welcome to the Game: ' + playerName);
-console.log('Your Starting gold amount: ' + playerGold);
+console.log('Welcome to the Game, ' + playerName + '  !!');
+console.log('Your Starting gold amount: ' + playerGold + " GOLD");
+
 /*
 Getting a link to Github-Command used to get this working
 1. Create a New repository on GitHub First - 
