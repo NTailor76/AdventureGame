@@ -3,6 +3,7 @@
 
 
 // IF ELSE CONDITION -- If logged in try - Show Message, if false other message
+console.log("IF ELSE CONDITION -- If logged in try - Show Message, if false other message")
  let userLoggedIn = true;
 
 if (userLoggedIn){
@@ -14,7 +15,7 @@ if (userLoggedIn){
 //Multiple Conditions
 //Is the user logged in?
 //How many items in the Cart?
-
+console.log("++++++++++Multiple Conditions+++++++Is the user logged in?+++++++++++How many items in the Cart?")
 let MultiuserLoggedIn = true;
 let numberOfItems = 1;
 

@@ -1,7 +1,7 @@
 //Functions Anatomy Diagram
 
 //1. Function Declaration
-
+console.log("===============Function Basic Declaration==================")
 function greet(name){      // <-- Function Name: ' greet', parameter: 'name'
     //2. Functiona Body
     const message = "Hello, " + name + " ! ";  // <-- Logic: Creates a greeting
@@ -9,9 +9,7 @@ function greet(name){      // <-- Function Name: ' greet', parameter: 'name'
    return message;                // <--- Returns the result to whereever 
 
 }                                 // <--- The func is called.
-
 //Example Usage
-
 console.log(greet("Alice"));     //Output: Hello, Alice !
 
 
@@ -27,7 +25,7 @@ function greetUser(userName){
 let userName = "Alice"
 greetUser(userName);
 
-// Calculate the ares of a Rectangle
+// Calculate the areas of a Rectangle
 
 function calculateRectangleArea(height,width){
     return height * width
@@ -80,15 +78,13 @@ function areaRectangle(length, width){
 console.log("Area of Rectangle (10 X 15): ", areaRectangle(10,15));
 console.log("Area of Rectangle (4 X 4): ", areaRectangle(4,4));
 
-// ANother Example with Retunr functions
-console.log("*********RETURN FUNCTIONS***************");
+
 // Another Example with Return functions
-console.log("*********RETURN FUNCTIONS***************");
+console.log("*********RETURN FUNCTIONS********++******");
 
 function multipleNumbers(a, b) {
   return a * b;  // This sends the sum back instead of printing it
 }
-
 // Define the two distinct dimensions before using them
 let length = "bob";
 let width = 14;
@@ -96,7 +92,7 @@ let width = 14;
 try{
 
 let sum = multipleNumbers(length, width);  // The returned value is stored in sum
-
+// Pipe Symbol is the OR, && is the AND.
 if (isNaN(length) || isNaN(widgth)){
     throw "Length or Width needs to be number";
 }
