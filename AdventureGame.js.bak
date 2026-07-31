@@ -22,45 +22,15 @@ let healingPotionValue = 30;  // How much health is restored
 // START Lab: Enhanced Item System
 // =========================================
 // Item templates with properties
-const healthPotion = {
-    name: "Health Potion",
-    type: "potion",
-    value: 5,     // Cost in gold
-    effect: 30,   // Healing amount
-    description: "Restores 30 health points"
-};
-
-const sword = {
-    name: "Sword",
-    type: "weapon",
-    value: 10,    // Cost in gold
-    effect: 10,   // Damage amount
-    description: "A sturdy blade for combat"
-};
-// Create additional item templates
-//===================================
-  const woodenShield = {
-    name: "Wooden Shield",
-    type: "armor",
-    value: 8, //Gold cost
-    effect: 5, //Protection amount
-    description: "Reduces damage taken in combat"
-  }  
-//advance weapon and armor template....
-const steelSword = {
-    name: "Steel Sword",
-    type: "weapon",
-    value: 25, // Higher gold cost for progression
-    effect: 18, // Higher damage than the basic sword (10)
-    description: "Get higer damage with your steel sword!"   
-}
-const ironShield = {
-    name: "Iron Shield",
-    type: "armor",
-    value: 20, // Higher gold cost for progression
-    effect: 12, // Better protection than the wooden shield (5)
-    description: "Gives me better protection then the wood - Iron made"
-}
+// Value is the Gold Cost
+//Effect is the protection amount
+let armorWeaponPortion = [
+    {name: "Sword", type: "weapon",value: 10,effect: 10,description: "A sturdy blade for combat"},
+    {name: "Steel Sword", type: "weapon",value: 25,effect: 18,description: "Get higer damage with your steel sword!"},
+    {name: "Wooden Shield", type: "armor",value: 8,effect: 5,description: "Reduces damage taken in combat"},
+    {name: "Iron Shield", type: "armor",value: 16,effect: 10,description: "Gives me better protection then the wood - Iron made"},
+    {name: "Health Potion", type: "portion",value: 5,effect: 30,description: "Restores 30 health points"}
+]
 //========= Helper function for item Management ================
 function getItemByType(){
     const allItems = [healthPotion,sword,woodenShield,steelSword,ironShield]
@@ -70,18 +40,17 @@ function getItemByType(){
 
 // Get the best item - with a function call.
 function getBestItem(type){
-    let matchingItems = getItemsByTpe(type);
+    let matchingItems = getItemsByType(type);
         if(matchingItems.length ===  0) return null;
         // Lets take the first index as the best at the start and then check which effects is higher for damanage  
         let bestItem = matchingItems[0];
        
         matchingItems.forEach(item => { if (item.effect > bestItem.effect)
             {bestItem =true;}
-        });
+        });//
     
         return bestItem;
     }
-
 
 // Create empty inventory array (from previous lab)
 let inventory = [];  // Will now store item objects instead of strings
@@ -419,7 +388,7 @@ function showHelp() {
     
     console.log("\nBattle Information:");
     console.log("- You need a weapon to win battles");
-    consoLe woole.log("- Weapons have different damage values");
+    console.log("- Weapons have different damage values");
     console.log("- Monsters appear in the forest");
     console.log("- Without a weapon, you'll lose health when retreating");
     
@@ -438,6 +407,9 @@ function showHelp() {
     console.log("- Defeat monsters to earn gold");
     console.log("- Health can't go above 100");
 }
+
+
+
 
 // ===========================
 // Movement Functions

@@ -127,7 +127,7 @@ function getLetterGrade(score){
     console.log("Test 3: " + score3Try);
     console.log("Average of the three Scores: " + roundAverage);
     console.log("Final Grade Awarded to student: " + gradedLetter);
-}
+
 // Lets created examples to Test the functions
 printGradeReport(subjectName,score1Try,score2Try,score3Try);
 
